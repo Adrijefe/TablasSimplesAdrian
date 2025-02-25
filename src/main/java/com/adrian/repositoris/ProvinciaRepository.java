@@ -1,10 +1,10 @@
 package com.adrian.repositoris;
 
-import com.adrian.model.PROVINCIA;
+import com.adrian.model.provincia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface ProvinciaRepository extends JpaRepository<PROVINCIA,Long> {
+public interface ProvinciaRepository extends JpaRepository<provincia,Long> {
 }

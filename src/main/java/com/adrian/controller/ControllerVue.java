@@ -1,8 +1,8 @@
 package com.adrian.controller;
 
 import com.adrian.model.Ciudad;
-import com.adrian.model.PAIS;
-import com.adrian.model.PROVINCIA;
+import com.adrian.model.pais;
+import com.adrian.model.provincia;
 import com.adrian.repositoris.CiudadRepository;
 import com.adrian.repositoris.FranquiciaRepository;
 import com.adrian.repositoris.PaisRepository;
@@ -39,12 +39,12 @@ public class ControllerVue {
     }
 
     @GetMapping("/provincias")
-    public List<PROVINCIA> listaprovincias(){
+    public List<provincia> listaprovincias(){
         return provinciaRepository.findAll();
     }
 
     @GetMapping("/pais")
-    public List<PAIS> listapais(){
+    public List<pais> listapais(){
         return paisRepository.findAll();
     }
 

@@ -1,9 +1,9 @@
 package com.adrian.controller;
 
 import com.adrian.model.Ciudad;
-import com.adrian.model.FRANQUICIA;
-import com.adrian.model.PAIS;
-import com.adrian.model.PROVINCIA;
+import com.adrian.model.franquicia;
+import com.adrian.model.pais;
+import com.adrian.model.provincia;
 import com.adrian.repositoris.CiudadRepository;
 import com.adrian.repositoris.FranquiciaRepository;
 import com.adrian.repositoris.PaisRepository;
@@ -44,58 +44,58 @@ public class LocalitzacioRestController {
     @DeleteMapping("/ciudades/{id}")
     public String deleteCiudad(@PathVariable Long id) {
         ciudadRepository.deleteById(id);
-        return "Ciudad borrada";
+        return "borrada";
     }
 
     @GetMapping("/provincias")
-    public List<PROVINCIA> getProvincias() {
+    public List<provincia> getProvincias() {
         return provinciaRepository.findAll();
     }
 
 
     @PostMapping("/provincias")
-    public void createProvincia(@RequestBody PROVINCIA provincia) {
+    public void createProvincia(@RequestBody provincia provincia) {
         provinciaRepository.save(provincia);
     }
 
     @DeleteMapping("/provincias/{id}")
     public String deleteProvincias(@PathVariable Long id) {
         provinciaRepository.deleteById(id);
-        return "Provincia borrada";
+        return "borrada";
     }
 
     @GetMapping("/paises")
-    public List<PAIS> getPaises() {
+    public List<pais> getPaises() {
         return paisRepository.findAll();
     }
 
 
     @PostMapping("/paises")
-    public void createPais(@RequestBody PAIS pais) {
+    public void createPais(@RequestBody pais pais) {
         paisRepository.save(pais);
     }
 
     @DeleteMapping("/paises/{id}")
     public String deletePais(@PathVariable Long id) {
         paisRepository.deleteById(id);
-        return "Pais borrada";
+        return " borrada";
     }
 
 
     @GetMapping("/franquicias")
-    public List<FRANQUICIA> getFranquicia() {
+    public List<franquicia> getFranquicia() {
         return franquiciaRepository.findAll();
     }
 
     @PostMapping("/franquicias")
-    public void createFranquicia(@RequestBody FRANQUICIA franquicia) {
+    public void createFranquicia(@RequestBody franquicia franquicia) {
         franquiciaRepository.save(franquicia);
     }
 
     @DeleteMapping("/franquicias/{id}")
     public String deleteFranquicias(@PathVariable Long id) {
         ciudadRepository.deleteById(id);
-        return "Franquicia borrada";
+        return "borrada";
     }
 
 

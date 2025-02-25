@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 @Table(name = "FRANQUICIA")
 
-public class FRANQUICIA {
+public class franquicia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,9 +24,9 @@ public class FRANQUICIA {
     )
     List<Ciudad> ciudadList;
 
-    public FRANQUICIA(){}
+    public franquicia(){}
 
-    public FRANQUICIA(long id, String nom, List<Ciudad> ciudadList) {
+    public franquicia(long id, String nom, List<Ciudad> ciudadList) {
         this.id = id;
         this.nom = nom;
         this.ciudadList = ciudadList;

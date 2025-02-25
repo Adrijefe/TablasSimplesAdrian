@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 @Table(name= "PROVINCIA")
 
-public class PROVINCIA {
+public class provincia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
@@ -17,20 +17,20 @@ public class PROVINCIA {
     @JsonIgnoreProperties("provincias")
     @ManyToOne
     @JoinColumn(name = "pais_id", nullable = false)
-    PAIS pais_id;
+    pais pais_id;
 
     @JsonIgnoreProperties("provincia_id")
     @OneToMany(mappedBy = "provincia_id", cascade = CascadeType.ALL)
     private List<Ciudad> ciudades;
 
-    public PROVINCIA(long id, String nom, PAIS pais_id,  List<Ciudad> ciudades) {
+    public provincia(long id, String nom, pais pais_id, List<Ciudad> ciudades) {
         this.id = id;
         Nom = nom;
         this.pais_id = pais_id;
         this.ciudades=ciudades;
     }
 
-    public PROVINCIA() {
+    public provincia() {
 
     }
 
@@ -50,11 +50,11 @@ public class PROVINCIA {
         Nom = nom;
     }
 
-    public PAIS getPais_id() {
+    public pais getPais_id() {
         return pais_id;
     }
 
-    public void setPais_id(PAIS pais_id) {
+    public void setPais_id(pais pais_id) {
         this.pais_id = pais_id;
     }
 

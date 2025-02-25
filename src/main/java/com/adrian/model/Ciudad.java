@@ -20,10 +20,10 @@ long id;
     @JoinColumn(name = "provincia_id", nullable = false)
     @JsonIgnoreProperties("ciudades")// Evista la recursio infinita, No serialitzem el camp ciudades de Provincia
 
-    private PROVINCIA provincia_id;
+    private provincia provincia_id;
 
 
-    public Ciudad(long id, String nom, int poblacio, String descripcio, String imatge, PROVINCIA provincia_id) {
+    public Ciudad(long id, String nom, int poblacio, String descripcio, String imatge, provincia provincia_id) {
         this.id = id;
         this.nom = nom;
         this.poblacio = poblacio;
@@ -50,11 +50,11 @@ long id;
         this.nom = nom;
     }
 
-    public PROVINCIA getProvincia_id() {
+    public provincia getProvincia_id() {
         return provincia_id;
     }
 
-    public void setProvincia_id(PROVINCIA provincia_id) {
+    public void setProvincia_id(provincia provincia_id) {
         this.provincia_id = provincia_id;
     }
 
