@@ -18,10 +18,10 @@ public class pais {
 
     @JsonIgnoreProperties("pais_id")
     @OneToMany(mappedBy = "pais_id", cascade = CascadeType.ALL)
-    private List<com.adrian.model.provincia> provincia;
+    private List<provincia> provincia;
 
 
-    public pais(long id, String nom, List<com.adrian.model.provincia> provincias) {
+    public pais(long id, String nom, List<provincia> provincias) {
         this.id = id;
         this.nom = nom;
         this.provincia=  provincias;
@@ -51,7 +51,7 @@ public class pais {
         return provincia;
     }
 
-    public void setProvincia(List<com.adrian.model.provincia> provincia) {
+    public void setProvincia(List<provincia> provincia) {
         this.provincia = provincia;
     }
 }

@@ -18,7 +18,7 @@ long id;
     private String imatge;
     @ManyToOne
     @JoinColumn(name = "provincia_id", nullable = false)
-    @JsonIgnoreProperties("ciudades")// Evista la recursio infinita, No serialitzem el camp ciudades de Provincia
+    @JsonIgnoreProperties("ciudades")
 
     private provincia provincia_id;
 

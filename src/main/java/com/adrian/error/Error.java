@@ -7,7 +7,7 @@
 //import org.springframework.web.bind.annotation.ResponseStatus;
 //
 //@ControllerAdvice
-//public class GlobalExeptionHandler {
+//public class Error {
 //
 //    @ExceptionHandler(Exception.class)
 //    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)

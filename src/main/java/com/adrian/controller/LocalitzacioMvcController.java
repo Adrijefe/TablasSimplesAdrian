@@ -31,13 +31,12 @@
 //    @GetMapping("/ciudad")
 //    public String getCiudades( Model model){
 //        model.addAttribute("ciudad",ciutatRepository.findAll());
-//        return "ciudadesInfo";
+//        return "ciudades";
 //    }
 //
 //    @GetMapping("/paisos")
 //    public String veurePaisos(Model model) {
-//        List<PAIS> paisos = paisRepository.findAll();
-//        model.addAttribute("paisos", paisos);
+//        model.addAttribute("paisos", paisRepository.findAll());
 //        return "paisos";
 //    }
 //

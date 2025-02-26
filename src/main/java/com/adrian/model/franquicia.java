@@ -22,14 +22,14 @@ public class franquicia {
             joinColumns =  @JoinColumn(name = "franquicia_id"),
             inverseJoinColumns = @JoinColumn(name = "ciudad_id")
     )
-    List<Ciudad> ciudadList;
+    List<Ciudad> ciudad;
 
     public franquicia(){}
 
-    public franquicia(long id, String nom, List<Ciudad> ciudadList) {
+    public franquicia(long id, String nom, List<Ciudad> list) {
         this.id = id;
         this.nom = nom;
-        this.ciudadList = ciudadList;
+        this.ciudad = list;
     }
 
     public long getId() {
@@ -48,11 +48,11 @@ public class franquicia {
         this.nom = nom;
     }
 
-    public List<Ciudad> getCiudadList() {
-        return ciudadList;
+    public List<Ciudad> getCiudad() {
+        return ciudad;
     }
 
-    public void setCiudadList(List<Ciudad> ciudadList) {
-        this.ciudadList = ciudadList;
+    public void setCiudad(List<Ciudad> ciudadList) {
+        this.ciudad = ciudadList;
     }
 }
